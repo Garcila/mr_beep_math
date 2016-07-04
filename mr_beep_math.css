@@ -1,3 +1,13 @@
+/*
+font-family: 'Knewave', cursive;
+font-family: 'Share Tech Mono', monospace;*/
+
+body {
+  margin: 0px;
+  font-family: 'Share Tech Mono', monospace;
+  color: rgb(255, 255, 255);
+}
+
 .all_page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,10 +16,19 @@
   height: 100vh;
 }
 
-header, footer {
-  padding: 20px;
-  background-color: #666;
-  color: white;
+header {
+  display: flex;
+  padding: 20px 0px 10px 20px;
+  background-color: #668eac;
+  text-align:center;
+  align-content: center;
+}
+
+.title {
+  font-family: 'Geostar Fill', cursive;
+  font-size: 3em;
+  font-weight: bolder;
+  margin: 0px;
 }
 
 .body {
@@ -18,24 +37,64 @@ header, footer {
 }
 
 .col-1 {
-  background-color: lightblue;
+  display: flex;
+  background-color: #ffffff;
+  color: rgb(2, 5, 29);
   flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  font-family: 'Geostar Fill', cursive;
 }
 
 .col-2 {
-  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  background-color: #8db7d6;
   width: 160px;
   order: -1;
 }
 
+.select_name, .score {
+  font-family: 'Geostar Fill', cursive;
+  background-color: #3686c3;
+  text-align:center;
+  align-content: center;
+}
+
+.score{
+  flex-grow: 2;
+}
+
+form {
+  /*flex-direction: column;*/
+  /*justify-content: space-around;*/
+  align-content: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+
 .col-3 {
-  background: peachpuff;
+  background: rgb(255, 33, 33);
   width: 160px;
 }
 
+footer {
+  padding: 20px;
+  background-color: #2f75aa;
+}
+
+
 @media (max-width:700px) {
-  .body {
+  .body, .col-2 {
     flex-direction: column;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .col-2, .col-3 {
     width: auto;
