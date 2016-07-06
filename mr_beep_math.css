@@ -5,7 +5,7 @@ font-family: 'Share Tech Mono', monospace;*/
 body {
   margin: 0px;
   font-family: 'Share Tech Mono', monospace;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .all_page {
@@ -19,7 +19,8 @@ body {
 header {
   display: flex;
   padding: 20px 0px 10px 20px;
-  background-color: #668eac;
+  /*background-color: #668eac;*/
+  background: #2a88c5  url(http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg) center center / 70%;
   text-align:center;
   align-content: center;
 }
@@ -38,6 +39,8 @@ header {
 
 .col-1 {
   display: flex;
+  flex-direction: column;
+
   background-color: #ffffff;
   color: rgb(2, 5, 29);
   flex-grow: 1;
@@ -46,6 +49,26 @@ header {
 }
 
 .question {
+  text-align: center;
+  justify-content: flex-end;
+  font-family: 'Geostar Fill', cursive;
+  font-size: 5em;
+  padding: 10px;
+  min-width: 300px;
+  background-color: #4aa1cc;
+  color: #ffffff;
+}
+
+.answer {
+  display: flex;
+}
+
+.answer_box {
+  text-align: center;
+  justify-content: flex-end;
+  min-width: 300px;
+  padding: 10px;
+  font-size: 1em;
   font-family: 'Geostar Fill', cursive;
 }
 
@@ -57,9 +80,9 @@ header {
   order: -1;
 }
 
-.select_name, .score {
+.select, .score {
   font-family: 'Geostar Fill', cursive;
-  background-color: #3686c3;
+  background-color: #1d679f;
   text-align:center;
   align-content: center;
 }
@@ -68,16 +91,38 @@ header {
   flex-grow: 2;
 }
 
-form {
-  /*flex-direction: column;*/
-  /*justify-content: space-around;*/
+.operand_choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-content: center;
   padding: 20px;
   flex-grow: 1;
 }
 
+button {
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: rgb(33, 70, 113);
+  color: #ffffff;
+}
+
+button:hover {
+  background-color:#2f75aa;
+}
+
+button:focus {
+  background-color: rgb(170, 25, 25);
+}
+
+.image_button {
+  font-family: 'Share Tech Mono', monospace;
+
+}
+
 .col-3 {
-  background: rgb(255, 33, 33);
+  background: rgb(170, 25, 25);
   width: 160px;
 }
 
@@ -94,7 +139,9 @@ footer {
   form {
     display: flex;
     flex-direction: row;
+    flex: 0 0 0;
     justify-content: space-around;
+    /*flex-wrap: wrap;*/
   }
   .col-2, .col-3 {
     width: auto;
