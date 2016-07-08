@@ -19,33 +19,60 @@ body {
 header {
   display: flex;
   padding: 20px 0px 10px 20px;
-  /*background-color: #668eac;*/
   background: #2a88c5  url(http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg) center center / 70%;
   text-align:center;
+  min-height: 50px;
   align-content: center;
 }
 
 .title {
+  /*flex: 1 1 auto;*/
   font-family: 'Geostar Fill', cursive;
   font-size: 3em;
   font-weight: bolder;
-  margin: 0px;
 }
 
 .body {
   display: flex;
   flex-grow: 1;
+  background-color: rgb(121, 162, 204);
+  flex-shrink: 0;
 }
 
 .col-1 {
   display: flex;
   flex-direction: column;
-
-  background-color: #ffffff;
+  align-self: flex-end;
   color: rgb(2, 5, 29);
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  padding: 10px, 0px, 10px, 10px;
+  margin-bottom: 10px;
+}
+
+.feedback {
+  padding: 10px;
+  font-family: 'Geostar Fill', cursive;
+  text-shadow: -1px 0 rgb(179, 166, 5), 0 1px rgb(215, 200, 0), 1px 0 rgb(215, 200, 0), 0 -1px rgb(179, 166, 5);
+  color: rgb(255, 237, 0);
+  max-width: 350px;
+  font-size: 4em;
+  align-self: center;
+}
+
+.robot {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url(https://cdn.pbrd.co/images/8Esl4Hi1t.png);
+  background-repeat: no-repeat;
+  margin: 30px 10px 0px 30px;
+  min-width: 260px;
+  min-height: 374px;
+  /*z-index: 2;*/
 }
 
 .question {
@@ -53,10 +80,12 @@ header {
   justify-content: flex-end;
   font-family: 'Geostar Fill', cursive;
   font-size: 5em;
-  padding: 10px;
-  min-width: 300px;
-  background-color: #4aa1cc;
+  min-height: 150px;
+  min-width: 400px;
+  background-color: #5488b4;
   color: #ffffff;
+  border-style: ridge;
+  border-color: blackrgb(8, 53, 71);
 }
 
 .answer {
@@ -82,7 +111,7 @@ header {
 
 .select, .score {
   font-family: 'Geostar Fill', cursive;
-  background-color: #1d679f;
+  background-color: #3686c3;
   text-align:center;
   align-content: center;
 }
@@ -132,18 +161,35 @@ footer {
 }
 
 
-@media (max-width:700px) {
-  .body, .col-2 {
+@media (max-width:800px) {
+  .body, .col-2, .robot {
     flex-direction: column;
   }
-  form {
+
+  .operand_choice {
     display: flex;
     flex-direction: row;
-    flex: 0 0 0;
+    flex: 0 0 auto;
+    flex: 0 0 1;
     justify-content: space-around;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
   }
-  .col-2, .col-3 {
+
+  .col-2, .col-3, header {
     width: auto;
+    min-height: 40px;
+  }
+
+  .robot {
+    display: flex;
+    align-self: center;
+    mar
+    background-image: url(https://cdn.pbrd.co/images/8Esl4Hi1t.png);
+    background-repeat: no-repeat;
+    min-height: 210px;
+  }
+
+  .select {
+    display: none;
   }
 }

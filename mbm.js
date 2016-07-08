@@ -22,6 +22,31 @@ $(document).ready(function(){
   function chooseOperand() {
     $('.add').click(function() {
       var userChoice = "+";
+    }
+    $('.substract').click(function() {
+      var userChoice = "-";
+    }
+    $('.multiply').click(function() {
+      var userChoice = "x";
+    }
+    $('.divide').click(function() {
+      var userChoice = "/";
+    }
+  }
+    
+
+
+
+
+
+
+
+
+
+
+
+    $('.add').click(function() {
+      var userChoice = "+";
       getNumbers();
       presentQuestion(userChoice);
       answer = numX + numY;
