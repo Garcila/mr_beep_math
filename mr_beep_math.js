@@ -11,7 +11,7 @@ $(document).ready(function(){
   // start();
 
   function rand() {
-    return Math.floor(Math.random()*(15-0+1)+0);
+    return Math.floor(Math.random()*(9-0+1)+0);
   }
 
   function getNumbers() {
@@ -28,6 +28,7 @@ $(document).ready(function(){
   function chooseOperand() {
     operand = $('.sign').on('click',function() {
       console.log($(this).val());
+      $('.feedback').empty();
       userChoice = ($(this).val());
       getNumbers();
       if(userChoice == '+'){
@@ -51,6 +52,23 @@ $(document).ready(function(){
     })
   }
 
+  function numberToRobot(numX, numY){
+    $('.numX').empty();
+    $('.numY').empty();
+    if(userChoice === '+') {
+      for(var i=0; i < numX; i++){
+        $('.numX').append('<img src=images/head.png class="head">    </img>');
+      }
+      for(var i=0; i < numY; i++){
+        $('.numY').append('<img src=images/head.png class="head"></img> <br>');
+      }
+    } else {
+      for(var i=0; i < numX; i++){
+        $('.numX').append('<img src=images/head.png class="head"></img> <br>');
+      }
+    }
+  }
+
   function captureAnswer() {
     $('.answer_box').off().on('keypress', function(e) {  //.off() is there in order not to get multiple answers on continous clicks
   		if(e.which == 13) {
@@ -62,9 +80,12 @@ $(document).ready(function(){
         console.log(user_answer);
         if(user_answer === answer) {
           $('.feedback').append('correct' +'<br>' + numX + ' ' + userChoice + ' ' + numY +' ' + '=' + ' ' + answer);
+        } else {
+          $('.feedback').append('Sorry, ' +'<br>' + numX + ' ' + userChoice + ' ' + numY +' ' + 'is not' + ' ' + user_answer);
         }
       }
     })
+    numberToRobot(numX, numY);
   }
 
   function focusOnAnswer() {
