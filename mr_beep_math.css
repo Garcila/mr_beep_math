@@ -23,20 +23,27 @@ header {
   text-align:center;
   min-height: 50px;
   align-content: center;
+  justify-content: center;
 }
 
 .title {
-  /*flex: 1 1 auto;*/
   font-family: 'Geostar Fill', cursive;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bolder;
 }
 
-.body {
+.content {
   display: flex;
   flex-grow: 1;
   background-color: rgb(121, 162, 204);
   flex-shrink: 0;
+  align-self: center;
+  width: 100%;
+}
+
+.zapato{
+  display: flex;
+  flex-grow: 1;
 }
 
 .col-1 {
@@ -53,12 +60,17 @@ header {
 
 .feedback {
   padding: 10px;
-  font-family: 'Geostar Fill', cursive;
-  text-shadow: -1px 0 rgb(179, 166, 5), 0 1px rgb(215, 200, 0), 1px 0 rgb(215, 200, 0), 0 -1px rgb(179, 166, 5);
-  color: rgb(255, 237, 0);
+  font-family: sans-serif, monospace;
+  font-variant: small-caps;
+  font-weight: 600;
+  /*font-family: 'Geostar Fill', cursive;*/
+  text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150), 1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 93, 163)blue;
   max-width: 350px;
   font-size: 4em;
-  align-self: center;
+  /*align-self: center;*/
+  justify-content: center;
 }
 
 .robot {
@@ -72,19 +84,19 @@ header {
   margin: 30px 10px 0px 30px;
   min-width: 260px;
   min-height: 374px;
-  /*z-index: 2;*/
 }
 
 .question {
   text-align: center;
   justify-content: flex-end;
-  font-family: 'Geostar Fill', cursive;
-  font-size: 5em;
+  font-family: sans-serif, monospace;
+  /*font-family: 'Geostar Fill', cursive;*/
+  font-size: 8em;
   min-height: 150px;
   min-width: 400px;
   background-color: #5488b4;
   color: #ffffff;
-  border-style: ridge;
+  /*border-style: ridge;*/
   border-color: blackrgb(8, 53, 71);
 }
 
@@ -98,7 +110,11 @@ header {
   min-width: 300px;
   padding: 10px;
   font-size: 1em;
-  font-family: 'Geostar Fill', cursive;
+  /*font-family: 'Geostar Fill', cursive;*/
+}
+
+.next_options {
+  margin: 10px;
 }
 
 .col-2 {
@@ -117,7 +133,7 @@ header {
 }
 
 .score{
-  flex-grow: 2;
+  /*flex-grow: 2;*/
 }
 
 .operand_choice {
@@ -162,8 +178,25 @@ footer {
 
 
 @media (max-width:800px) {
-  .body, .col-2, .robot {
+  .col-2, .robot {
     flex-direction: column;
+    align-content: center;
+  }
+
+  .zapato {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 30px;
+  }
+
+  .col-2 {
+    order: 2;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .operand_choice {
@@ -175,15 +208,28 @@ footer {
     flex-wrap: wrap;
   }
 
-  .col-2, .col-3, header {
+  .col-2, header {
     width: auto;
     min-height: 40px;
+  }
+
+  .col-1 {
+    margin: -19px;
+    align-self: center;
+  }
+
+  .col-3 {
+    display: none;
+  }
+
+  .question {
+    /*align-self: center;*/
+    justify-content: center;
   }
 
   .robot {
     display: flex;
     align-self: center;
-    mar
     background-image: url(https://cdn.pbrd.co/images/8Esl4Hi1t.png);
     background-repeat: no-repeat;
     min-height: 210px;

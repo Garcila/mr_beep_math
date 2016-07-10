@@ -16,57 +16,33 @@ $(document).ready(function(){
 
   function getNumbers() {
     numX = rand();
+    console.log(numX);
     numY = rand();
+    console.log(numY);
+    if(numX < numY) {
+      numX = numY;
+      numY = numX;
+    }
   }
 
   function chooseOperand() {
-    $('.add').click(function() {
-      var userChoice = "+";
+    operand = $('.sign').on('click',function() {
+      console.log($(this).val());
+      userChoice = ($(this).val());
       getNumbers();
+      if(userChoice == '+'){
+        answer = numX + numY;
+      } else {
+        answer = numX - numY;
+      }
       presentQuestion(userChoice);
-      answer = numX + numY;
-      console.log(userChoice);
+      focusOnAnswer();
       console.log(answer);
       captureAnswer();
-      focusOnAnswer();
-    })
-
-    $('.substract').click(function() {
-      var userChoice = "-";
-      getNumbers();
-      presentQuestion(userChoice);
-      answer = numX - numY;
-      console.log(userChoice);
-      console.log(answer);
-      focusOnAnswer();
-    })
-
-    $('.multiply').click(function() {
-      var userChoice = "x";
-      getNumbers();
-      presentQuestion(userChoice);
-      answer = numX * numY;
-      console.log(userChoice);
-      console.log(answer);
-      focusOnAnswer();
-    })
-
-    $('.divide').click(function() {
-      var userChoice = "/";
-      getNumbers();
-      presentQuestion(userChoice);
-      answer = numX / numY;
-      console.log(userChoice);
-      console.log(answer);
-      focusOnAnswer();
-    })
+    });
   }
 
   chooseOperand();
-
-  function focusOnAnswer() {
-    $('.answer_box').focus();
-  }
 
   function presentQuestion(userChoice) {
     $('.question').empty();
@@ -78,32 +54,20 @@ $(document).ready(function(){
   function captureAnswer() {
     $('.answer_box').off().on('keypress', function(e) {  //.off() is there in order not to get multiple answers on continous clicks
   		if(e.which == 13) {
+        setTimeout(function() {
+            $('.answer_box').val('');
+        }, 2000);
+        $('.feedback').empty();
   			user_answer = +this.value;
         console.log(user_answer);
         if(user_answer === answer) {
-          $('.feedback').append('Correct!');
+          $('.feedback').append('correct' +'<br>' + numX + ' ' + userChoice + ' ' + numY +' ' + '=' + ' ' + answer);
         }
       }
     })
-    // $('.image_button').off().on('click', function(e) {
-    //   user_answer = +this.value;
-    //   console.log(user_answer);
-    //     if(user_answer === answer) {
-    //       console.log('Eso');
-    //     }
-    // })
   }
 
-  // function answerFormula() {
-  //   if(userChoice === '+') {
-  //     answer = numX + numY;
-  //   } else if (userChoice === '-') {
-  //     answer = numX - numY;
-  //   } else if (userChoice === 'x') {
-  //     answer = numX * numY;
-  //   } else if (userChoice === '/') {
-  //     answer = numX / numY;
-  //   }
-  // }
-
+  function focusOnAnswer() {
+    $('.answer_box').focus();
+  }
 })
