@@ -1,7 +1,3 @@
-/*
-font-family: 'Knewave', cursive;
-font-family: 'Share Tech Mono', monospace;*/
-
 body {
   margin: 0px;
   font-family: 'Share Tech Mono', monospace;
@@ -19,15 +15,15 @@ body {
 header {
   display: flex;
   padding: 20px 0px 10px 20px;
-  background: #2a88c5  url(http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg) center center / 70%;
+  background: #2e69a7;
   text-align:center;
   min-height: 50px;
-  align-content: center;
-  justify-content: center;
+  align-content: flex-start;
 }
 
 .title {
   font-family: 'Geostar Fill', cursive;
+  padding-left: 20px;
   font-size: 2em;
   font-weight: bolder;
 }
@@ -63,40 +59,77 @@ header {
   font-family: sans-serif, monospace;
   font-variant: small-caps;
   font-weight: 600;
-  /*font-family: 'Geostar Fill', cursive;*/
   text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150), 1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
   color: rgb(255, 255, 255);
   background-color: rgb(20, 93, 163)blue;
   max-width: 350px;
-  font-size: 4em;
-  /*align-self: center;*/
+  font-size: 2.5em;
   justify-content: center;
 }
 
-.robot {
+.robot_parts {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
   justify-content: flex-end;
   align-items: flex-end;
-  background-image: url(https://cdn.pbrd.co/images/8Esl4Hi1t.png);
+}
+
+.robot, .robot_head {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
   background-repeat: no-repeat;
-  margin: 30px 10px 0px 30px;
-  min-width: 260px;
-  min-height: 374px;
+  margin: 0px 10px 0px 30px;
+}
+
+.eye_heart {
+  display: none;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 30px;
+}
+
+.eye_wrong {
+  display: none;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 30px;
+}
+
+.short_robot {
+  display: none;
+}
+
+.hi {
+  padding: 10px;
+  font-family: sans-serif, monospace;
+  font-variant: small-caps;
+  text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150), 1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 93, 163)blue;
+  max-width: 350px;
+  font-size: 2em;
+  justify-content: center;
 }
 
 .question {
   text-align: center;
   justify-content: flex-end;
   font-family: sans-serif, monospace;
-  /*font-family: 'Geostar Fill', cursive;*/
   font-size: 8em;
   min-height: 150px;
   min-width: 400px;
   background-color: #5488b4;
   color: #ffffff;
-  /*border-style: ridge;*/
   border-color: blackrgb(8, 53, 71);
 }
 
@@ -110,7 +143,6 @@ header {
   min-width: 300px;
   padding: 10px;
   font-size: 1em;
-  /*font-family: 'Geostar Fill', cursive;*/
 }
 
 .next_options {
@@ -120,7 +152,7 @@ header {
 .col-2 {
   display: flex;
   flex-direction: column;
-  background-color: #8db7d6;
+  background-color: rgb(87, 143, 206);
   width: 160px;
   order: -1;
 }
@@ -132,10 +164,6 @@ header {
   align-content: center;
 }
 
-.score{
-  /*flex-grow: 2;*/
-}
-
 .operand_choice {
   display: flex;
   flex-direction: column;
@@ -145,66 +173,68 @@ header {
   flex-grow: 1;
 }
 
-button {
+.sign {
+  margin: 30px auto;
   padding: 10px;
   font-size: 1em;
   font-family: 'Share Tech Mono', monospace;
-  background-color: rgb(33, 70, 113);
+  background-color: #2e69a7;
   color: #ffffff;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  transition: background-color .3s;
+  min-width: 100px;
 }
 
-button:hover {
-  background-color:#2f75aa;
-}
-
-button:focus {
-  background-color: rgb(170, 25, 25);
-}
-
-.image_button {
-  font-family: 'Share Tech Mono', monospace;
-
+button:hover, button:focus {
+  background-color:#bb2323;
 }
 
 .col-3 {
   display: flex;
-  /*flex-grow: 1;*/
+  flex-grow: 1;
   flex-direction: column;
-  background: rgb(170, 25, 25);
+  background: rgb(87, 143, 206);
   width: 20%;
   justify-content: space-around;
+}
+
+.operand {
+  display: flex;
+  font-size: 15em;
+  line-height: 100px;
+  justify-content: center;
 }
 
 .numX, .numY {
   display: flex;
   align-content: center;
+  justify-content: center;
   flex: 0 1 1;
   padding: 5px;
-  /*flex: 1;*/
-  /*flex-direction: column;*/
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 5px;
+  min-width: 100px;
+  background-color: #4f86c4;
+  text-align: justify;
 }
 
 .head {
   height: 8%;
-  max-width: 50%;
-}
-
-.circle {
-  height: 8%;
-  border-radius: 50%
-  backcground-color: blue;
+  max-width: 60px;
 }
 
 footer {
   padding: 20px;
-  background-color: #2f75aa;
+  background-color: #2e69a7;
 }
 
 
 @media (max-width:800px) {
-  .col-2, .robot {
+  .col-2 {
     flex-direction: column;
     align-content: center;
   }
@@ -245,25 +275,31 @@ footer {
   }
 
   .col-3 {
+    display: flex;
     flex-direction: row;
     flex-grow: 1;
+    width: 100%;
     align-items: flex-start;
   }
 
-  .numX, .numY {
-    flex-direction: column;
-  }
-
   .question {
-    /*align-self: center;*/
     justify-content: center;
   }
 
   .robot {
+    display: none;
+  }
+
+  .short_robot {
     display: flex;
     align-self: center;
-    background-image: url(https://cdn.pbrd.co/images/8Esl4Hi1t.png);
-    background-repeat: no-repeat;
+  }
+
+  .robot_parts {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-self: center;
     min-height: 210px;
   }
 

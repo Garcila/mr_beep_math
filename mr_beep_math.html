@@ -17,39 +17,46 @@
 
     <div class="content">
       <div class="zapato">
-        <div class="robot" img></div>
+        <div class="robot_parts">
+          <img src="https://cdn.pbrd.co/images/agXHvkBUX.png" class="robot_head" id="normal_eyes"></img>
+          <img src="https://cdn.pbrd.co/images/aiNuUDkvv.png" class="eye_heart"  ></img>
+          <img src="https://cdn.pbrd.co/images/11V8KmgQ3.png" class="eye_wrong"  ></img>
+          <!-- <img src="https://cdn.pbrd.co/images/aiNuUDkvv.png" class="eye_check"  ></img> -->
+          <img src="https://cdn.pbrd.co/images/ag9x6ZPte.png" class="robot" ></img>
+          <img src="https://cdn.pbrd.co/images/ak8Lmb8XH.png" class="short_robot" ></img>
+        </div>
 
         <div class="col-1">
+          <div class="hi">Hi, Math is FUN <br>   select either add or substract from the list on the left.</div>
           <div class="feedback">
           </div>
 
           <div class="question"></div>
           <br>
           <div class="answer">
-            <input class="answer_box" type="text" value="" placeholder="type your answer here" autofocus></input>
-            <input type="submit" class="image_button" value="Submit"></input>
+            <input class="answer_box" type="text" value="" placeholder="type your answer and press enter" autofocus></input>
           </div>
           <br>
-          <!-- <div class="next_options">
-            <button type="button" class="try again" >Try again</button>
-            <button type="button" class="help">Help</button>
-            <button type="button" class="continue">Continue</button>
-          </div> -->
         </div>
       </div>
 
       <div class="col-2">
         <div class="select"><h3>SELECT</h3></div>
         <div class="operand_choice">
-          <button type="button" class='sign' class="add" value='+'>Add</button>
-          <button type="button" class='sign' class="substract" value='-'>Substract</button>
+          <button type="button" class='sign' class="add" class="btn" value='+'>ADD</button>
+          <button type="button" class='sign' class="substract" class="btn" value='-'>SUBSTRACT</button>
         </div>
-        <div class="score"><h3>SCORE</h3></div>
+        <div class="score">
+          <h3>SCORE</h3>
+          <div>Right:  </div>
+          <div>Wrong:  </div>
+        </div>
       </div>
 
       <div class="col-3">
-        <div class="numX"></div>
-        <div class="numY"></div>
+        <div class="numX"><h2>In this area I'll lend my head, to help you answer the question.</h2></div>
+        <div class="operand"></div>
+        <div class="numY"><h2>Each number will be represented by the same number of heads, so you can give your fingers a break.^_^.</h2></div>
       </div>
     </div>
 
