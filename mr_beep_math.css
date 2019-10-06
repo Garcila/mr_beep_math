@@ -16,7 +16,7 @@ header {
   display: flex;
   padding: 20px 0px 10px 20px;
   background: #2e69a7;
-  text-align:center;
+  text-align: center;
   min-height: 50px;
   align-content: flex-start;
 }
@@ -37,7 +37,7 @@ header {
   width: 100%;
 }
 
-.zapato{
+.zapato {
   display: flex;
   flex-grow: 1;
 }
@@ -59,9 +59,10 @@ header {
   font-family: sans-serif, monospace;
   font-variant: small-caps;
   font-weight: 600;
-  text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150), 1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
+  text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150),
+    1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
   color: rgb(255, 255, 255);
-  background-color: rgb(20, 93, 163)blue;
+  background-color: rgb(20, 93, 163) blue;
   max-width: 350px;
   font-size: 2.5em;
   justify-content: center;
@@ -75,7 +76,8 @@ header {
   align-items: flex-end;
 }
 
-.robot, .robot_head {
+.robot,
+.robot_head {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -113,9 +115,10 @@ header {
   padding: 10px;
   font-family: sans-serif, monospace;
   font-variant: small-caps;
-  text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150), 1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
+  text-shadow: -1px 0 rgb(36, 106, 150), 0 1px rgb(36, 106, 150),
+    1px 0 rgb(36, 106, 150), 0 -1px rgb(36, 106, 150);
   color: rgb(255, 255, 255);
-  background-color: rgb(20, 93, 163)blue;
+  background-color: rgb(20, 93, 163) blue;
   max-width: 350px;
   font-size: 2em;
   justify-content: center;
@@ -125,9 +128,9 @@ header {
   text-align: center;
   justify-content: flex-end;
   font-family: sans-serif, monospace;
-  font-size: 8em;
+  font-size: 7em;
   min-height: 150px;
-  min-width: 400px;
+  min-width: 10vw;
   background-color: #5488b4;
   color: #ffffff;
   border-color: blackrgb(8, 53, 71);
@@ -157,10 +160,11 @@ header {
   order: -1;
 }
 
-.select, .score {
+.select,
+.score {
   font-family: 'Geostar Fill', cursive;
   background-color: #3686c3;
-  text-align:center;
+  text-align: center;
   align-content: center;
 }
 
@@ -184,22 +188,23 @@ header {
   border-width: 0;
   outline: none;
   border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  transition: background-color .3s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s;
   min-width: 100px;
 }
 
-button:hover, button:focus {
-  background-color:#bb2323;
+button:hover,
+button:focus {
+  background-color: #bb2323;
 }
 
 .col-3 {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  justify-content: center;
   background: rgb(87, 143, 206);
   width: 20%;
-  justify-content: space-around;
 }
 
 .operand {
@@ -209,22 +214,21 @@ button:hover, button:focus {
   justify-content: center;
 }
 
-.numX, .numY {
+.numX,
+.numY {
   display: flex;
   align-content: center;
   justify-content: center;
-  flex: 0 1 1;
   padding: 5px;
   flex-wrap: wrap;
-  padding: 5px;
-  min-width: 100px;
   background-color: #4f86c4;
   text-align: justify;
+  margin: 2rem 0;
 }
 
 .head {
-  height: 8%;
-  max-width: 60px;
+  height: 5vh;
+  min-width: 10px;
 }
 
 footer {
@@ -232,8 +236,7 @@ footer {
   background-color: #2e69a7;
 }
 
-
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .col-2 {
     flex-direction: column;
     align-content: center;
@@ -264,7 +267,8 @@ footer {
     flex-wrap: wrap;
   }
 
-  .col-2, header {
+  .col-2,
+  header {
     width: auto;
     min-height: 40px;
   }

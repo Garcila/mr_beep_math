@@ -1,38 +1,26 @@
 $(document).ready(function(){
-  // function start() {
-  //   var userChoice = "+";
-  //   getNumbers();
-  //   presentQuestion(userChoice);
-  //   answer = numX + numY;
-  //   console.log(userChoice);
-  //   console.log(answer);
-  // }
-  //
-  // start();
+  const rand= () => Math.floor(Math.random()*(15-0+1)+0);
 
-  function rand() {
-    return Math.floor(Math.random()*(15-0+1)+0);
-  }
-
-  function getNumbers() {
+  const getNumbers = () => {
     numX = rand();
     numY = rand();
   }
 
-  function chooseOperand() {
+  const chooseOperand = () => {
     $('.add').click(function() {
       var userChoice = "+";
-    }
-    $('.substract').click(function() {
+    }),
+    $('.subtract').click(function() {
       var userChoice = "-";
-    }
+    }),
     $('.multiply').click(function() {
       var userChoice = "x";
-    }
+    }),
     $('.divide').click(function() {
       var userChoice = "/";
-    }
+    })
   }
+});
     
 
 
@@ -56,7 +44,7 @@ $(document).ready(function(){
       focusOnAnswer();
     })
 
-    $('.substract').click(function() {
+    $('.subtract').click(function() {
       var userChoice = "-";
       getNumbers();
       presentQuestion(userChoice);
